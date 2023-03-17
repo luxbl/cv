@@ -1,66 +1,265 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>This is a new jurnay</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lessons 6 &amp; 7</title>
+  <style>
+    hr {
+      margin: 15px auto;
+      clear: both;
+      height: 1px;
+      background-color: #000;
+    }
+    .h1 {
+      margin: 30px 0px;
+      display: inline-block;
+      font-size: 28pt;
+      font-weight: bold;
+    }
+    .newspaper {
+      -webkit-column-count: 3; /*chrome, safari , opera */
+      -moz-column-count: 3; /*firefox */
+      column-count: 3;
+
+      -webkit-column-gap: 40px; /* chrome safari opera*/
+      -moz-column-gap: 40px; /*firefox*/
+      column-gap: 40px;
+
+      -webkit-column-rule: 4px double #FF00FF; /*chrome safari opera */
+      -moz-column-rule: 4px double #FF00FF; /* firefox */
+      column-rule: 4px double #FF00FF;
+    }
+    .newspaper2 {
+      /*columns: 4 auto;*/
+      columns: auto 300px;
+    }
+    .rounded {
+      margin: 0px;
+      padding: 40px;
+      width: 400px;
+      color: #FFF;
+      background-color: #000;
+      /*border-radius: 25px;*/
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+
+    }
+    .shadow {
+      padding: 40px;
+      width: 400px;
+      color: #FFF;
+      background-color: #999999;
+      box-shadow: 10px 10px 5px #808080;
+    }
+    .opacity {
+      opacity: 0.5;
+
+    }
+    .linear {
+      padding: 40px;
+      width: 400px;
+      /*background: linear-gradient(#000000,#008000);*/
+      background: linear-gradient(45deg, #000000,#008000);
+    }
+    .radial {
+      padding: 40px;
+      width: 400px;
+      height: 200px;
+      /*background: radial-gradient(red, yellow, green);*/
+      background: radial-gradient(circle,red, yellow, green);
+    }
+    .twoD-translate {
+      padding: 20px;
+      width: 150px;
+      height: 75px;
+      color: #FFF;
+      text-align: center;
+      background-color: #0000CC;
+      transform: translate(200px, 100px);
+    }
+    .hidden-height {
+      height: 100px;
+    }
+    .twoD-scaling {
+      padding: 20px;
+      width: 150px;
+      height: 75px;
+      color: #FFF;
+      text-align: center;
+      background-color: #0000CC;
+      /*transform: scale(0.5,0.5);*/
+      transform: translate(200px, 100px) scale(2,2);
+    }
+    .hidden-height2 {
+      height: 150px;
+    }
+    .twoD-rotate {
+      padding: 20px;
+      width: 150px;
+      height: 75px;
+      color: #FFF;
+      text-align: center;
+      background-color: #0000CC;
+      transform: rotate(30deg);
+    }
+    .hidden-height3 {
+      height: 100px;
+    }
+    .threeD-rotateX {
+      padding: 20px;
+      width: 150px;
+      height: 75px;
+      color: #FFF;
+      text-align: center;
+      background-color: #0000CC;
+      transform: rotateX(180deg);
+    }
+    .threeD-rotateY {
+      padding: 20px;
+      width: 150px;
+      height: 75px;
+      color: #FFF;
+      text-align: center;
+      background-color: #0000CC;
+      transform: rotateY(180deg);
+    }
+    .twoD-skew {
+      padding: 20px;
+      width: 150px;
+      height: 75px;
+      color: #FFF;
+      text-align: center;
+      background-color: #0000CC;
+      transform: skew(20deg, 30deg);
+    }
+    .threeD-skewX {
+      padding: 20px;
+      width: 150px;
+      height: 75px;
+      color: #FFF;
+      text-align: center;
+      background-color: #0000CC;
+      transform: skewX(45deg);
+    }
+    .threeD-skewY {
+      padding: 20px;
+      width: 150px;
+      height: 75px;
+      color: #FFF;
+      text-align: center;
+      background-color: #0000CC;
+      transform: skewY(45deg);
+    }
+  </style>
 </head>
 <body>
-    <table cellspacing="20">
-        <tr>
-     <td><img src="mypic.png" alt="logo" height="100" width="100"></td>
-    <td><h1>Laxman Baraili</h1>
-    <p>I'm a <b><a href="https://www.appbrewery.co/">Front End Web Developer</a></b>.</p>
-    <p><em>I'm earning Full Stack Web Developer.</em></p></td>
-    </tr>
-    </table>
-    <hr>
-    <h3>Books and Teaching</h3>
-    <ul>
-        <li>Novel</li>
-        <li>Seconary Level</li>
-    </ul>
-    <hr>
-    <h3>Work Experience</h3>
+  <strong class="h1">Columns</strong>
+  <div class="newspaper">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+  </div>
 
-     <table cellspacing="10"> 
-        <thead>
-        <tr>
-            <th>Dates</th>
-            <th>Work</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>2009-2016</td>
-            <td>Business Development Officer</td>
-        </tr>
-        <tr>
-            <td>2018-Present</td>
-            <td>Front End Web Developer</td>
-        </tr>
-        </tbody>
-     </table>
-     <hr>
-     <h3>Skill</h3>
-      <table cellspacing="10">
-        <tr>
-            <td>Web Developement</td>
-            <td>⭐️⭐️⭐️⭐️⭐️</td>
-        </tr>
-        <tr>
-            <td>UI/UX Designer</td>
-            <td>⭐️⭐️⭐️⭐️⭐️</td>
-        </tr>
-        <tr>
-            <td>Marketing</td>
-            <td>⭐️⭐️⭐️⭐️</td>
-        </tr>
-      </table>
-     <hr>
-    <a href="hobbies.html">My Hobbies</a>
-    <a href="contact.html">Contact Me</a>
+  <hr>
 
+  <div class="newspaper2">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+  </div>
+
+  <hr>
+
+  <strong class="h1">Border Radius</strong>
+  <div class="rounded">
+    This div should have round corners!
+  </div>
+
+  <hr>
+
+  <strong class="h1">Box Shadow</strong>
+  <div class="shadow">
+    This div should have a shadow!
+  </div>
+
+  <hr>
+
+  <strong class="h1">Opacity</strong>
+  <div>
+    <img src="images/shoe2.jpg" alt="" class="opacity">
+  </div>
+
+  <hr>
+
+  <strong class="h1">Gradients</strong>
+  <div class="linear"></div>
+  <div class="radial"></div>
+
+  <hr>
+
+  <strong class="h1">2D Translate (Move without rotating or skewing.)</strong>
+  <div class="twoD-translate">Translate</div>
+  <div class="hidden-height"></div>
+
+  <hr>
+
+  <strong class="h1">2D Scaling (Increae or decrease the size.)</strong>
+  <div class="twoD-scaling">Scaling</div>
+  <div class="hidden-height2"></div>
+
+  <hr>
+
+  <strong class="h1">2D Rotation (Turns it clockwise by a specified number of degrees.)</strong>
+  <div class="twoD-rotate">Rotating</div>
+  <div class="hidden-height3"></div>
+
+  <hr>
+
+  <strong class="h1">3D Rotation X (Rotates around the x-axis)</strong>
+  <div class="threeD-rotateX">Rotating</div>
+  <div class="hidden-height3"></div>
+
+  <hr>
+
+  <strong class="h1">3D Rotation Y (Rotates around the y-axis)</strong>
+  <div class="threeD-rotateY">Rotating</div>
+  <div class="hidden-height3"></div>
+
+  <hr>
+
+  <strong class="h1">2D Skew (Stretches element in one or more directions.)</strong>
+  <div class="twoD-skew">Skewing</div>
+  <div class="hidden-height3"></div>
+
+  <hr>
+
+  <strong class="h1">3D Skew X (Skews around the x-axis)</strong>
+  <div class="threeD-skewX">Skewing</div>
+  <div class="hidden-height3"></div>
+
+  <hr>
+
+  <strong class="h1">3D Skew Y (Skews around the y-axis)</strong>
+  <div class="threeD-skewY">Skewing</div>
+  <div class="hidden-height3"></div>
+
+
+  <hr>
+  <h2>The XMLHttpRequest Object</h2>
+
+<div id="demo">
+  <p>Let Ajax change this text but your browser does not support </p>
+  <button type="button" onclick="loadDoc()">Content</button>
+</div>
+
+<script>
+  function loadDoc() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+      document.getElementById("demo").innerHTML = this.responseText;
+    }
+    xhttp.open("GET", "ajax_info.text");
+    xhttp.send();
+  }
+</script>
 </body>
 </html>
